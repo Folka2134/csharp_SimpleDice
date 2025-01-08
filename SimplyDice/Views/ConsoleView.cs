@@ -1,6 +1,8 @@
+using SimplyDice.Services;
+
 namespace SimplyDice.Views
 {
-    public class ConsoleView
+    public class ConsoleView : IView
     {
 
         public void DisplayMessage(string message)
@@ -10,7 +12,6 @@ namespace SimplyDice.Views
 
         public string UserInput()
         {
-            Console.WriteLine();
             return Console.ReadLine();
         }
     }
