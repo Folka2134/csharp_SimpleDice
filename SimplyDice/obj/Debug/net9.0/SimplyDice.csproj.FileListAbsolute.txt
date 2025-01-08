@@ -1,0 +1,15 @@
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/bin/Debug/net9.0/SimplyDice
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/bin/Debug/net9.0/SimplyDice.deps.json
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/bin/Debug/net9.0/SimplyDice.runtimeconfig.json
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/bin/Debug/net9.0/SimplyDice.dll
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/bin/Debug/net9.0/SimplyDice.pdb
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/obj/Debug/net9.0/SimplyDice.GeneratedMSBuildEditorConfig.editorconfig
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/obj/Debug/net9.0/SimplyDice.AssemblyInfoInputs.cache
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/obj/Debug/net9.0/SimplyDice.AssemblyInfo.cs
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/obj/Debug/net9.0/SimplyDice.csproj.CoreCompileInputs.cache
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/obj/Debug/net9.0/SimplyDice.sourcelink.json
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/obj/Debug/net9.0/SimplyDice.dll
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/obj/Debug/net9.0/refint/SimplyDice.dll
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/obj/Debug/net9.0/SimplyDice.pdb
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/obj/Debug/net9.0/SimplyDice.genruntimeconfig.cache
+/Users/folka/Programming/learning/csharp/games/SimplyDice/SimplyDice/obj/Debug/net9.0/ref/SimplyDice.dll
