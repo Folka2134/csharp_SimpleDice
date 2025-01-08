@@ -8,11 +8,10 @@ namespace SimplyDice.Views
             Console.WriteLine(message);
         }
 
-        public int UserInput()
+        public string UserInput()
         {
             Console.WriteLine();
-            var input = Console.ReadLine();
-            return int.Parse(input);
+            return Console.ReadLine();
         }
     }
 }
