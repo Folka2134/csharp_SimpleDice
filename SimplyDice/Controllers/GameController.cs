@@ -10,12 +10,12 @@ namespace SimplyDice.Controllers
         private int userScore;
         private int aiScore;
         private int roundsCounter;
-        private readonly ConsoleView _view;
+        private readonly IView _view;
         private readonly IDiceRoller _diceRoller;
 
-        public GameController(IDiceRoller diceRoller)
+        public GameController(IView view, IDiceRoller diceRoller)
         {
-            _view = new ConsoleView();
+            _view = view;
             _diceRoller = diceRoller;
             userScore = 0;
             aiScore = 0;
