@@ -43,6 +43,7 @@ namespace SimplyDice.Controllers
                     break;
                 }
 
+                Console.WriteLine();
                 _view.DisplayMessage("Roll or Quit?");
                 var input = _view.UserInput();
 
