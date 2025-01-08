@@ -1,5 +1,6 @@
 using System.Runtime.InteropServices;
 using Microsoft.VisualBasic;
+using SimplyDice.Services;
 using SimplyDice.Views;
 
 namespace SimplyDice.Controllers
@@ -10,10 +11,12 @@ namespace SimplyDice.Controllers
         private int aiScore;
         private int roundsCounter;
         private readonly ConsoleView _view;
+        private readonly IDiceRoller _diceRoller;
 
-        public GameController()
+        public GameController(IDiceRoller diceRoller)
         {
             _view = new ConsoleView();
+            _diceRoller = diceRoller;
             userScore = 0;
             aiScore = 0;
             roundsCounter = 1;
@@ -39,49 +42,40 @@ namespace SimplyDice.Controllers
                     }
                     break;
                 }
+
                 _view.DisplayMessage("Roll or Quit?");
                 var input = _view.UserInput();
 
                 if (input.ToLower() == "quit")
                 {
                     _view.DisplayMessage("Exiting game...");
-                    // stop program completely
                     break;
                 }
 
-                try
-                {
-                    var userRandomdiceRoll = new Random().Next(1, 7);
-                    var aiRandomdiceRoll = new Random().Next(1, 7);
 
-                    _view.DisplayMessage($"You rolled a {userRandomdiceRoll}");
-                    _view.DisplayMessage($"Ai rolled a {aiRandomdiceRoll}");
+                var userRoll = _diceRoller.Roll();
+                var aiRoll = _diceRoller.Roll();
 
-                    if (userRandomdiceRoll > aiRandomdiceRoll)
-                    {
-                        userScore++;
-                        _view.DisplayMessage("You win this round!");
-                    }
-                    else if (aiRandomdiceRoll > userRandomdiceRoll)
-                    {
-                        aiScore++;
-                        _view.DisplayMessage("Ai wins this round!");
-                    }
-                    else
-                    {
-                        _view.DisplayMessage("It's a tie!");
-                        roundsCounter--;
-                    }
-                    roundsCounter++;
-                }
-                catch (Exception ex)
+                _view.DisplayMessage($"You rolled a {userRoll}");
+                _view.DisplayMessage($"Ai rolled a {aiRoll}");
+
+                if (userRoll > aiRoll)
                 {
-                    _view.DisplayMessage($"An error occurred: {ex.Message}");
-                    throw;
+                    userScore++;
+                    _view.DisplayMessage("You win this round!");
                 }
+                else if (aiRoll > userRoll)
+                {
+                    aiScore++;
+                    _view.DisplayMessage("Ai wins this round!");
+                }
+                else
+                {
+                    _view.DisplayMessage("It's a tie!");
+                    roundsCounter--;
+                }
+                roundsCounter++;
             }
-
-
         }
 
     }
